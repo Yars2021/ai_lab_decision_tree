@@ -1,12 +1,15 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include <math.h>
+#include <set>
+#include <map>
+#include <cmath>
 
 using namespace std;
 
-/**
+/*
 0 - Student ID.
+-------------------------------------------------------------------------------------------------------------------------------------------------
 1 - Student Age (1: 18-21, 2: 22-25, 3: above 26).
 2 - Sex (1: female, 2: male).
 3 - Graduated high-school type: (1: private, 2: state, 3: other).
@@ -38,56 +41,49 @@ using namespace std;
 29 - Cumulative grade point average in the last semester (/4.00): (1: <2.00, 2: 2.00-2.49, 3: 2.50-2.99, 4: 3.00-3.49, 5: above 3.49).
 30 - Expected Cumulative grade point average in the graduation (/4.00): (1: <2.00, 2: 2.00-2.49, 3: 2.50-2.99, 4: 3.00-3.49, 5: above 3.49).
 31 - Course ID.
-32 - OUTPUT Grade (0: Fail, 1: DD, 2: DC, 3: CC, 4: CB, 5: BB, 6: BA, 7: AA).
- */
+-------------------------------------------------------------------------------------------------------------------------------------------------
+32 - OUTPUT Grade (0: Fail, 1: DD, 2: DC, 3: CC, 4: CB, 5: BB, 6: BA, 7: AA). (0-2 - fail, 3-7 - success)
+*/
+
+const size_t NUM_OF_ATTRIBUTES = 32;
+const size_t CLASS_INDEX = NUM_OF_ATTRIBUTES - 1;
+const size_t BARRIER_GRADE = 3;
 
 typedef struct {
     string student_id;
-    string attributes[31];
-} RecordX;
-
-typedef struct {
-    RecordX recordX;
-    string grade;
+    string attributes[NUM_OF_ATTRIBUTES];
 } Record;
 
-void printRecord(const Record& record)
-{
-    cout << record.recordX.student_id << ": ";
-    for (const string& attribute : record.recordX.attributes) cout << attribute << "; ";
-    cout << record.grade << endl;
+void printRecord(const Record& record) {
+    cout << record.student_id << ": ";
+    for (const string& attribute : record.attributes) cout << attribute << "; ";
+    cout << endl;
 }
 
-Record parseRecord(const string& line)
-{
+Record readRecord(const string& line) {
     Record record;
     size_t attr_n = 0;
 
     for (size_t i = 0; i < line.length(); i++) {
         string token;
-
         for (size_t j = i; j < line.length() && line[j] != ';'; i++, j++) token += line[j];
-
-        switch (attr_n) {
-            case 0:
-                record.recordX.student_id = token;
-                break;
-            case 32:
-                record.grade = token;
-                break;
-            default:
-                record.recordX.attributes[attr_n - 1] = token;
-                break;
-        }
-
+        if (attr_n == 0) record.student_id = token;
+        else record.attributes[attr_n - 1] = token;
         attr_n++;
     }
 
     return record;
 }
 
-vector<Record> readFile(const string& filename)
-{
+int getGrade(const Record& record) {
+    return stoi(record.attributes[CLASS_INDEX]);
+}
+
+void evaluateByGrade(Record &record, int barrier) {
+    record.attributes[CLASS_INDEX] = getGrade(record) >= barrier ? "1" : "0";
+}
+
+vector<Record> readFile(const string& filename) {
     ifstream fin(filename);
 
     vector<Record> records;
@@ -95,22 +91,76 @@ vector<Record> readFile(const string& filename)
     size_t line_i = 0;
 
     while (getline(fin, line)) {
-        if (line_i > 0) records.push_back(parseRecord(line));
+        if (line_i > 0) records.push_back(readRecord(line));
         line_i++;
     }
 
     fin.close();
 
+    for (auto &record : records) evaluateByGrade(record, BARRIER_GRADE);
+
     return records;
 }
 
+vector<size_t> getRandomAttributes(size_t N) {
+    vector<size_t> attributes;
+    set<size_t> used;
+    srandom(time(nullptr));
+    size_t attr = random() % N;
 
-double info()
-{
+    for (size_t i = 0; i < (size_t) ceil(sqrt(N)); i++) {
+        while (used.find(attr) != used.end() && !used.empty()) attr = random() % N;
+        used.insert(attr);
+        attributes.push_back(attr);
+    }
 
+    return attributes;
+}
+
+
+double get_info(const vector<Record>& T, size_t attr) {
+    map<int, int> attr_freq;
+    double entropy = 0;
+    for (const Record& record : T) attr_freq[stoi(record.attributes[attr])]++;
+    for (auto Class : attr_freq)
+        entropy += (attr_freq[Class.first] / (double) T.size()) * log2(attr_freq[Class.first] / (double) T.size());
+    return -entropy;
+}
+
+double get_info_x(const vector<Record>& T, size_t attr) {
+    map<int, vector<Record>> subsets;
+    double entropy = 0;
+    for (const Record& record : T) subsets[stoi(record.attributes[attr])].push_back(record);
+    for (const auto& subset_pair : subsets)
+        entropy += (((double) subset_pair.second.size() / (double) T.size()) * get_info(subset_pair.second, CLASS_INDEX));
+    return entropy;
+}
+
+double get_split_info(const vector<Record>& T, size_t attr) {
+    map<int, int> subset_lengths;
+    double length_ratio, info = 0;
+    for (const Record& record : T) subset_lengths[stoi(record.attributes[attr])]++;
+    for (auto subset_pair : subset_lengths) {
+        length_ratio = (double) subset_pair.second / (double) T.size();
+        info += (length_ratio * log2(length_ratio));
+    }
+    return -info;
+}
+
+double gain_ratio(const vector<Record>& T, size_t attr) {
+    return get_info(T, attr) * get_info_x(T, attr) / get_split_info(T, attr);
+}
+
+size_t find_optimal_split(const vector<Record>& T) {
+    size_t optimal = 0;
+    for (size_t i = 0; i < NUM_OF_ATTRIBUTES - 1; i++)
+        if (gain_ratio(T, i) > gain_ratio(T, optimal))
+            optimal = i;
+    return optimal;
 }
 
 int main() {
-
+    vector<Record> dataset = readFile("/home/yars/CLionProjects/ai_lab3/DATA.csv");
+    cout << find_optimal_split(dataset);
     return 0;
 }
