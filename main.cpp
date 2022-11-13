@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <utility>
 #include <vector>
 #include <set>
 #include <map>
@@ -151,16 +152,141 @@ double gain_ratio(const vector<Record>& T, size_t attr) {
     return get_info(T, attr) * get_info_x(T, attr) / get_split_info(T, attr);
 }
 
-size_t find_optimal_split(const vector<Record>& T) {
-    size_t optimal = 0;
-    for (size_t i = 0; i < NUM_OF_ATTRIBUTES - 1; i++)
-        if (gain_ratio(T, i) > gain_ratio(T, optimal))
-            optimal = i;
-    return optimal;
+class Node {
+private:
+    size_t split_attr;
+    vector<Record> subset;
+    map<int, Node*> children;
+public:
+    explicit Node(vector<Record> sub);
+    void set_split_attr(size_t split);
+    void addChild(int key, Node *child);
+    size_t get_split_attr() const;
+    vector<Record> getSubset();
+    map<int, Node*> getChildren();
+    void find_optimal_split(const vector<size_t>& attributes);
+    void find_optimal_split(const vector<size_t>& attributes, set<size_t>& used);
+    void branch();
+    void branch_children(const vector<size_t>& attributes, size_t depth_limit);
+    void branch_children(const vector<size_t>& attributes, set<size_t>& used, size_t depth_limit);
+    void print(bool print_subsets, size_t offset) const;
+    ~Node();
+};
+
+Node::Node(vector<Record> sub) {
+    this->split_attr = 0;
+    this->subset = std::move(sub);
+    this->children = *new map<int, Node*>;
+}
+
+void Node::set_split_attr(size_t split) {
+    this->split_attr = split;
+}
+
+void Node::addChild(int key, Node *child) {
+    this->children[key] = child;
+}
+
+size_t Node::get_split_attr() const {
+    return this->split_attr;
+}
+
+vector<Record> Node::getSubset() {
+    return this->subset;
+}
+
+map<int, Node *> Node::getChildren() {
+    return this->children;
+}
+
+void Node::find_optimal_split(const vector<size_t>& attributes) {
+    size_t optimal = attributes[0];
+    for (size_t attribute : attributes)
+        if (gain_ratio(this->getSubset(), attribute) > gain_ratio(this->getSubset(), optimal))
+            optimal = attribute;
+    this->set_split_attr(optimal);
+}
+
+void Node::find_optimal_split(const vector<size_t>& attributes, set<size_t>& used) {
+    size_t optimal = attributes[0];
+    for (size_t attribute : attributes)
+        if (gain_ratio(this->getSubset(), attribute) > gain_ratio(this->getSubset(), optimal))
+            if (used.empty() || (used.find(attribute) == used.end()))
+                optimal = attribute;
+    used.insert(optimal);
+    this->set_split_attr(optimal);
+}
+
+void Node::branch() {
+    map<int, vector<Record>> subsets;
+    for (const Record& record : this->getSubset())
+        subsets[stoi(record.attributes[this->get_split_attr()])].push_back(record);
+    for (const auto& attr_pair : subsets)
+        this->addChild(attr_pair.first, new Node(attr_pair.second));
+}
+
+void Node::branch_children(const vector<size_t>& attributes, size_t depth_limit) {
+    for (auto child_pair : this->children) {
+        child_pair.second->find_optimal_split(attributes);
+        child_pair.second->branch();
+        if (depth_limit > 0)
+            child_pair.second->branch_children(attributes, depth_limit - 1);
+    }
+}
+
+void Node::branch_children(const vector<size_t>& attributes, set<size_t>& used, size_t depth_limit) {
+    for (auto child_pair : this->children) {
+        child_pair.second->find_optimal_split(attributes, used);
+        child_pair.second->branch();
+        if (depth_limit > 0)
+            child_pair.second->branch_children(attributes, used, depth_limit - 1);
+    }
+}
+
+void Node::print(bool print_subsets, size_t offset) const {
+    string tab = string(2 * offset, ' ');
+    cout << tab << "Attribute index: " << this->split_attr << endl;
+    cout << tab << "Entropy: " << get_info(this->subset, this->split_attr) << endl;
+    if (print_subsets) {
+        cout << tab << "Subset: " << endl;
+        for (const auto& record : this->subset) {
+            cout << tab;
+            printRecord(record);
+        }
+    }
+    cout << "******************************************************************************************************************" << endl;
+    if (!this->children.empty())
+        for (auto child_pair : this->children) {
+            cout << tab << "Parent attribute value: " << child_pair.first << endl;
+            child_pair.second->print(print_subsets, offset + 1);
+        }
+}
+
+Node::~Node() {
+    this->split_attr = 0;
+    for (auto child_pair : this->children)
+        delete child_pair.second;
 }
 
 int main() {
     vector<Record> dataset = readFile("/home/yars/CLionProjects/ai_lab3/DATA.csv");
-    cout << find_optimal_split(dataset);
+    vector<size_t> attr = getRandomAttributes(NUM_OF_ATTRIBUTES);
+    set<size_t> used;
+
+    cout << "Selected attributes: " << endl;
+    for (size_t a : attr) cout << a << ' ';
+    cout << endl << endl;
+
+    Node *root = new Node(dataset);
+    root->find_optimal_split(attr);
+    root->branch();
+    root->branch_children(attr, 3);
+    root->print(true, 0);
+
+    cout << "Used attributes: " << endl;
+    for (size_t a : used) cout << a << ' ';
+    cout << endl << endl;
+
+    delete root;
     return 0;
 }
