@@ -55,10 +55,10 @@ typedef struct {
     string attributes[NUM_OF_ATTRIBUTES];
 } Record;
 
-void printRecord(const Record& record) {
-    cout << record.student_id << ": ";
-    for (const string& attribute : record.attributes) cout << attribute << "; ";
-    cout << endl;
+void printRecord(const Record& record, ostream& sout) {
+    sout << record.student_id << ": ";
+    for (const string& attribute : record.attributes) sout << attribute << "; ";
+    sout << endl;
 }
 
 Record readRecord(const string& line) {
@@ -149,12 +149,12 @@ double get_split_info(const vector<Record>& T, size_t attr) {
 }
 
 double gain_ratio(const vector<Record>& T, size_t attr) {
-    return get_info(T, attr) * get_info_x(T, attr) / get_split_info(T, attr);
+    return get_info(T, CLASS_INDEX) * get_info_x(T, attr) / get_split_info(T, attr);
 }
 
 class Node {
 private:
-    size_t split_attr;
+    int split_attr;
     vector<Record> subset;
     map<int, Node*> children;
 public:
@@ -169,7 +169,7 @@ public:
     void branch();
     void branch_children(const vector<size_t>& attributes, size_t depth_limit);
     void branch_children(const vector<size_t>& attributes, set<size_t>& used, size_t depth_limit);
-    void print(bool print_subsets, size_t offset) const;
+    void print(bool print_subsets, size_t offset, ostream& sout) const;
     ~Node();
 };
 
@@ -229,7 +229,7 @@ void Node::branch_children(const vector<size_t>& attributes, size_t depth_limit)
     for (auto child_pair : this->children) {
         child_pair.second->find_optimal_split(attributes);
         child_pair.second->branch();
-        if (depth_limit > 0)
+        if (depth_limit > 0 && child_pair.second->getSubset().size() > 1)
             child_pair.second->branch_children(attributes, depth_limit - 1);
     }
 }
@@ -238,27 +238,27 @@ void Node::branch_children(const vector<size_t>& attributes, set<size_t>& used, 
     for (auto child_pair : this->children) {
         child_pair.second->find_optimal_split(attributes, used);
         child_pair.second->branch();
-        if (depth_limit > 0)
+        if (depth_limit > 0 && child_pair.second->getSubset().size() > 1)
             child_pair.second->branch_children(attributes, used, depth_limit - 1);
     }
 }
 
-void Node::print(bool print_subsets, size_t offset) const {
+void Node::print(bool print_subsets, size_t offset, ostream& sout) const {
     string tab = string(2 * offset, ' ');
-    cout << tab << "Attribute index: " << this->split_attr << endl;
-    cout << tab << "Entropy: " << get_info(this->subset, this->split_attr) << endl;
+    sout << tab << "Attribute index: " << this->split_attr << endl;
+    sout << tab << "Entropy: " << get_info(this->subset, this->split_attr) << endl;
     if (print_subsets) {
-        cout << tab << "Subset: " << endl;
+        sout << tab << "Subset: " << endl;
         for (const auto& record : this->subset) {
-            cout << tab;
-            printRecord(record);
+            sout << tab;
+            printRecord(record, sout);
         }
     }
-    cout << "******************************************************************************************************************" << endl;
+    sout << "******************************************************************************************************************" << endl;
     if (!this->children.empty())
         for (auto child_pair : this->children) {
-            cout << tab << "Parent attribute value: " << child_pair.first << endl;
-            child_pair.second->print(print_subsets, offset + 1);
+            sout << tab << "Parent attribute value: " << child_pair.first << endl;
+            child_pair.second->print(print_subsets, offset + 1, sout);
         }
 }
 
@@ -268,10 +268,31 @@ Node::~Node() {
         delete child_pair.second;
 }
 
+pair<vector<Record>, vector<Record>> train_test_split(const vector<Record>& dataset, double test_percent) {
+    vector<Record> train, test;
+
+    for (size_t i = 0; i < dataset.size(); i++)
+        if (i < (size_t)(test_percent * (double) dataset.size()))
+            test.push_back(dataset[i]);
+        else
+            train.push_back(dataset[i]);
+
+    return {train, test};
+}
+
+int predict_class(const Record& record, const Node& decision_tree) {
+    Node current = decision_tree;
+    while (!current.getChildren().empty()) {
+        current = *current.getChildren()[stoi(record.attributes[current.get_split_attr()])];
+    }
+    return stoi(current.getSubset()[0].attributes[CLASS_INDEX]);
+}
+
 int main() {
     vector<Record> dataset = readFile("/home/yars/CLionProjects/ai_lab3/DATA.csv");
+    ofstream fout("/home/yars/CLionProjects/ai_lab3/tree.txt");
+    pair<vector<Record>, vector<Record>> data = train_test_split(dataset, 0.1);
     vector<size_t> attr = getRandomAttributes(NUM_OF_ATTRIBUTES);
-    set<size_t> used;
 
     cout << "Selected attributes: " << endl;
     for (size_t a : attr) cout << a << ' ';
@@ -280,13 +301,19 @@ int main() {
     Node *root = new Node(dataset);
     root->find_optimal_split(attr);
     root->branch();
-    root->branch_children(attr, 3);
-    root->print(true, 0);
+    root->branch_children(attr, 10);
+    root->print(true, 0, fout);
 
-    cout << "Used attributes: " << endl;
-    for (size_t a : used) cout << a << ' ';
-    cout << endl << endl;
+    double correct = 0;
+    for (const auto& rec : data.second) {
+        cout << predict_class(rec, *root) << ' ' << rec.attributes[CLASS_INDEX] << endl;
+        if (predict_class(rec, *root) == stoi(rec.attributes[CLASS_INDEX]))
+            correct++;
+    }
+
+    cout << correct / (double)(data.second.size()) << endl;
 
     delete root;
+    fout.close();
     return 0;
 }
