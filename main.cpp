@@ -6,6 +6,9 @@
 #include <map>
 #include <cmath>
 
+#define train(data) data.first
+#define test(data) data.second
+
 using namespace std;
 
 /*
@@ -107,10 +110,10 @@ vector<size_t> getRandomAttributes(size_t N) {
     vector<size_t> attributes;
     set<size_t> used;
     srandom(time(nullptr));
-    size_t attr = random() % N;
+    size_t attr = random() % (N - 1);
 
-    for (size_t i = 0; i < (size_t) ceil(sqrt(N)); i++) {
-        while (used.find(attr) != used.end() && !used.empty()) attr = random() % N;
+    for (size_t i = 0; i < (size_t) floor(sqrt(N)); i++) {
+        while (used.find(attr) != used.end() && !used.empty()) attr = random() % (N - 1);
         used.insert(attr);
         attributes.push_back(attr);
     }
@@ -119,21 +122,22 @@ vector<size_t> getRandomAttributes(size_t N) {
 }
 
 
-double get_info(const vector<Record>& T, size_t attr) {
+double get_info(const vector<Record>& T) {
     map<int, int> attr_freq;
     double entropy = 0;
-    for (const Record& record : T) attr_freq[stoi(record.attributes[attr])]++;
+    for (const Record& record : T) attr_freq[stoi(record.attributes[CLASS_INDEX])]++;
     for (auto Class : attr_freq)
         entropy += (attr_freq[Class.first] / (double) T.size()) * log2(attr_freq[Class.first] / (double) T.size());
     return -entropy;
 }
 
 double get_info_x(const vector<Record>& T, size_t attr) {
+    if (attr == NUM_OF_ATTRIBUTES) return -1;
     map<int, vector<Record>> subsets;
     double entropy = 0;
     for (const Record& record : T) subsets[stoi(record.attributes[attr])].push_back(record);
     for (const auto& subset_pair : subsets)
-        entropy += (((double) subset_pair.second.size() / (double) T.size()) * get_info(subset_pair.second, CLASS_INDEX));
+        entropy += (((double) subset_pair.second.size() / (double) T.size()) * get_info(subset_pair.second));
     return entropy;
 }
 
@@ -149,33 +153,42 @@ double get_split_info(const vector<Record>& T, size_t attr) {
 }
 
 double gain_ratio(const vector<Record>& T, size_t attr) {
-    return get_info(T, CLASS_INDEX) * get_info_x(T, attr) / get_split_info(T, attr);
+    if (attr == NUM_OF_ATTRIBUTES) return -1;
+    return get_info(T) - get_info_x(T, attr) / get_split_info(T, attr);
+}
+
+vector<size_t> exclude_attribute(const vector<size_t>& vec, size_t drop) {
+    vector<size_t> res;
+    for (size_t item : vec)
+        if (item != drop)
+            res.push_back(item);
+    return res;
 }
 
 class Node {
 private:
-    int split_attr;
+    size_t split_attr;
     vector<Record> subset;
+    vector<size_t> available_attr;
     map<int, Node*> children;
 public:
-    explicit Node(vector<Record> sub);
+    Node(vector<Record> sub, vector<size_t> attr);
     void set_split_attr(size_t split);
     void addChild(int key, Node *child);
     size_t get_split_attr() const;
     vector<Record> getSubset();
     map<int, Node*> getChildren();
-    void find_optimal_split(const vector<size_t>& attributes);
-    void find_optimal_split(const vector<size_t>& attributes, set<size_t>& used);
+    void find_optimal_split();
     void branch();
-    void branch_children(const vector<size_t>& attributes, size_t depth_limit);
-    void branch_children(const vector<size_t>& attributes, set<size_t>& used, size_t depth_limit);
+    void branch_children(vector<size_t>& attributes);
     void print(bool print_subsets, size_t offset, ostream& sout) const;
     ~Node();
 };
 
-Node::Node(vector<Record> sub) {
-    this->split_attr = 0;
+Node::Node(vector<Record> sub, vector<size_t> attr) {
+    this->split_attr = NUM_OF_ATTRIBUTES;
     this->subset = std::move(sub);
+    this->available_attr = std::move(attr);
     this->children = *new map<int, Node*>;
 }
 
@@ -199,54 +212,44 @@ map<int, Node *> Node::getChildren() {
     return this->children;
 }
 
-void Node::find_optimal_split(const vector<size_t>& attributes) {
-    size_t optimal = attributes[0];
-    for (size_t attribute : attributes)
+void Node::find_optimal_split() {
+    if (this->available_attr.empty()) {
+        this->split_attr = NUM_OF_ATTRIBUTES;
+        return;
+    }
+    size_t optimal = this->available_attr[0];
+    for (unsigned long attribute : this->available_attr)
         if (gain_ratio(this->getSubset(), attribute) > gain_ratio(this->getSubset(), optimal))
             optimal = attribute;
     this->set_split_attr(optimal);
 }
 
-void Node::find_optimal_split(const vector<size_t>& attributes, set<size_t>& used) {
-    size_t optimal = attributes[0];
-    for (size_t attribute : attributes)
-        if (gain_ratio(this->getSubset(), attribute) > gain_ratio(this->getSubset(), optimal))
-            if (used.empty() || (used.find(attribute) == used.end()))
-                optimal = attribute;
-    used.insert(optimal);
-    this->set_split_attr(optimal);
-}
-
 void Node::branch() {
+    if (this->get_split_attr() >= NUM_OF_ATTRIBUTES) return;
     map<int, vector<Record>> subsets;
     for (const Record& record : this->getSubset())
         subsets[stoi(record.attributes[this->get_split_attr()])].push_back(record);
     for (const auto& attr_pair : subsets)
-        this->addChild(attr_pair.first, new Node(attr_pair.second));
+        this->addChild(attr_pair.first, new Node(attr_pair.second,
+                                                 exclude_attribute(this->available_attr, this->split_attr)));
 }
 
-void Node::branch_children(const vector<size_t>& attributes, size_t depth_limit) {
+void Node::branch_children(vector<size_t>& attributes) {
     for (auto child_pair : this->children) {
-        child_pair.second->find_optimal_split(attributes);
+        child_pair.second->find_optimal_split();
         child_pair.second->branch();
-        if (depth_limit > 0 && child_pair.second->getSubset().size() > 1)
-            child_pair.second->branch_children(attributes, depth_limit - 1);
-    }
-}
-
-void Node::branch_children(const vector<size_t>& attributes, set<size_t>& used, size_t depth_limit) {
-    for (auto child_pair : this->children) {
-        child_pair.second->find_optimal_split(attributes, used);
-        child_pair.second->branch();
-        if (depth_limit > 0 && child_pair.second->getSubset().size() > 1)
-            child_pair.second->branch_children(attributes, used, depth_limit - 1);
+        if (!attributes.empty())
+            child_pair.second->branch_children(attributes);
     }
 }
 
 void Node::print(bool print_subsets, size_t offset, ostream& sout) const {
     string tab = string(2 * offset, ' ');
     sout << tab << "Attribute index: " << this->split_attr << endl;
-    sout << tab << "Entropy: " << get_info(this->subset, this->split_attr) << endl;
+    sout << tab << "Entropy: " << get_info_x(this->subset, this->split_attr) << endl;
+    sout << tab << "Available attributes: ";
+    for (size_t attr : this->available_attr) cout << attr << ' ';
+    cout << endl;
     if (print_subsets) {
         sout << tab << "Subset: " << endl;
         for (const auto& record : this->subset) {
@@ -268,52 +271,79 @@ Node::~Node() {
         delete child_pair.second;
 }
 
-pair<vector<Record>, vector<Record>> train_test_split(const vector<Record>& dataset, double test_percent) {
+pair<vector<Record>, vector<Record>> train_test_split(const vector<Record>& dataset, double test_percent, int random_seed) {
     vector<Record> train, test;
+    map<size_t, bool> used;
+
+    srandom(random_seed);
+    size_t attr = random() % dataset.size();
+
+    for (size_t i = 0; i < (size_t) ceil(test_percent * (double) dataset.size()); i++) {
+        while (used[attr]) attr = random() % dataset.size();
+        used[attr] = true;
+        test.push_back(dataset[attr]);
+    }
 
     for (size_t i = 0; i < dataset.size(); i++)
-        if (i < (size_t)(test_percent * (double) dataset.size()))
-            test.push_back(dataset[i]);
-        else
+        if (!used[i])
             train.push_back(dataset[i]);
 
     return {train, test};
 }
 
-int predict_class(const Record& record, const Node& decision_tree) {
+double predict_class_probability(const Record& record, const Node& decision_tree) {
     Node current = decision_tree;
-    while (!current.getChildren().empty()) {
+    while (current.get_split_attr() != NUM_OF_ATTRIBUTES)
         current = *current.getChildren()[stoi(record.attributes[current.get_split_attr()])];
-    }
-    return stoi(current.getSubset()[0].attributes[CLASS_INDEX]);
+    double success_rate = 0;
+    for (const auto& rec : current.getSubset())
+        if (stoi(rec.attributes[CLASS_INDEX]) == 1)
+            success_rate++;
+    success_rate /= (double) current.getSubset().size();
+    return success_rate;
+}
+
+void print_result_for_graph(const vector<pair<double, int>>& result, ostream& sout) {
+    for (auto & i : result)
+        sout << i.second << ", ";
+    sout << endl;
+    for (auto & i : result)
+        sout << i.first << ", ";
 }
 
 int main() {
     vector<Record> dataset = readFile("/home/yars/CLionProjects/ai_lab3/DATA.csv");
-    ofstream fout("/home/yars/CLionProjects/ai_lab3/tree.txt");
-    pair<vector<Record>, vector<Record>> data = train_test_split(dataset, 0.1);
+    ofstream fout("/home/yars/CLionProjects/ai_lab3/out.txt");
+    ofstream tout("/home/yars/CLionProjects/ai_lab3/tree.txt");
+    pair<vector<Record>, vector<Record>> data = train_test_split(dataset, 0.2, (int) time(nullptr));
     vector<size_t> attr = getRandomAttributes(NUM_OF_ATTRIBUTES);
+    vector<pair<double, int>> result;
+    double correct = 0;
 
     cout << "Selected attributes: " << endl;
     for (size_t a : attr) cout << a << ' ';
     cout << endl << endl;
 
-    Node *root = new Node(dataset);
-    root->find_optimal_split(attr);
+    Node *root = new Node(dataset, attr);
+    root->find_optimal_split();
     root->branch();
-    root->branch_children(attr, 10);
-    root->print(true, 0, fout);
+    root->branch_children(attr);
+    root->print(false, 0, tout);
 
-    double correct = 0;
-    for (const auto& rec : data.second) {
-        cout << predict_class(rec, *root) << ' ' << rec.attributes[CLASS_INDEX] << endl;
-        if (predict_class(rec, *root) == stoi(rec.attributes[CLASS_INDEX]))
+    for (const auto& record : dataset)
+        result.emplace_back(predict_class_probability(record, *root), stoi(record.attributes[CLASS_INDEX]));
+
+    cout << endl << "Result comparison" << endl;
+    for (auto & i : test(data)) {
+        cout << i.attributes[CLASS_INDEX] << " <-> " << (predict_class_probability(i, *root) >= 0.5 ? 1 : 0) << endl;
+        if (stoi(i.attributes[CLASS_INDEX]) == (predict_class_probability(i, *root) > 0.5 ? 1 : 0))
             correct++;
     }
 
-    cout << correct / (double)(data.second.size()) << endl;
+    cout << "Test dataset accuracy: " << correct / (double) test(data).size() << endl;
 
     delete root;
+    tout.close();
     fout.close();
     return 0;
 }
