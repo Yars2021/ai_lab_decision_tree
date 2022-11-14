@@ -249,7 +249,7 @@ void Node::print(bool print_subsets, size_t offset, ostream& sout) const {
     sout << tab << "Entropy: " << get_info_x(this->subset, this->split_attr) << endl;
     sout << tab << "Available attributes: ";
     for (size_t attr : this->available_attr) cout << attr << ' ';
-    cout << endl;
+    sout << endl;
     if (print_subsets) {
         sout << tab << "Subset: " << endl;
         for (const auto& record : this->subset) {

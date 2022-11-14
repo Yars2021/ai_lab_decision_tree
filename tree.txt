@@ -1,715 +1,1319 @@
-Attribute index: 30
-Entropy: 0.594066
-Available attributes: ******************************************************************************************************************
+Attribute index: 12
+Entropy: 0.966786
+Available attributes: 
+******************************************************************************************************************
 Parent attribute value: 1
-  Attribute index: 27
-  Entropy: 0.942859
-  Available attributes: ******************************************************************************************************************
+  Attribute index: 15
+  Entropy: 0.968211
+  Available attributes: 
+******************************************************************************************************************
   Parent attribute value: 1
-    Attribute index: 2
-    Entropy: 0.687336
-    Available attributes: ******************************************************************************************************************
+    Attribute index: 0
+    Entropy: 0
+    Available attributes: 
+******************************************************************************************************************
     Parent attribute value: 1
-      Attribute index: 20
+      Attribute index: 9
       Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 6
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 2
-      Attribute index: 6
-      Entropy: 0.872691
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 20
-        Entropy: 0.649022
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
+      Available attributes: 
+******************************************************************************************************************
       Parent attribute value: 2
-        Attribute index: 20
-        Entropy: 0.811278
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 3
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 20
+        Attribute index: 8
         Entropy: 0
-        Available attributes: ******************************************************************************************************************
+        Available attributes: 
+******************************************************************************************************************
         Parent attribute value: 1
           Attribute index: 32
           Entropy: -1
-          Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 20
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-  Parent attribute value: 2
-    Attribute index: 2
-    Entropy: 0.932397
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 20
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 6
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 2
-      Attribute index: 20
-      Entropy: 0.985228
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 6
-        Entropy: 0.964984
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 3
-      Attribute index: 20
-      Entropy: 0.8
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 6
-        Entropy: 0.688722
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
+          Available attributes: 
+******************************************************************************************************************
       Parent attribute value: 3
-        Attribute index: 6
+        Attribute index: 8
         Entropy: 0
-        Available attributes: ******************************************************************************************************************
+        Available attributes: 
+******************************************************************************************************************
         Parent attribute value: 2
           Attribute index: 32
           Entropy: -1
-          Available attributes: ******************************************************************************************************************
-  Parent attribute value: 3
-    Attribute index: 6
-    Entropy: 0.919691
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 2
-      Entropy: 0.909091
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 20
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 20
-        Entropy: 1
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
+          Available attributes: 
+******************************************************************************************************************
     Parent attribute value: 2
-      Attribute index: 2
-      Entropy: 0.751333
-      Available attributes: ******************************************************************************************************************
+      Attribute index: 9
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
       Parent attribute value: 1
-        Attribute index: 20
+        Attribute index: 8
         Entropy: 0
-        Available attributes: ******************************************************************************************************************
+        Available attributes: 
+******************************************************************************************************************
         Parent attribute value: 1
           Attribute index: 32
           Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
+          Available attributes: 
+******************************************************************************************************************
       Parent attribute value: 2
-        Attribute index: 20
-        Entropy: 0.848386
-        Available attributes: ******************************************************************************************************************
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 4
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 2
+    Attribute index: 9
+    Entropy: 0.75
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
         Parent attribute value: 1
           Attribute index: 32
           Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 8
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
           Attribute index: 32
           Entropy: -1
-          Available attributes: ******************************************************************************************************************
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 4
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 8
+      Entropy: 1
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 3
+    Attribute index: 9
+    Entropy: 0.550978
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 3
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 8
+      Entropy: 0.918296
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 0
+        Entropy: 0.666667
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 4
+    Attribute index: 9
+    Entropy: 0.787111
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 8
+      Entropy: 0.918296
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 0
+        Entropy: 0.666667
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 0
+      Entropy: 0.918296
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 5
+    Attribute index: 0
+    Entropy: 0
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 9
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 3
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 9
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
 Parent attribute value: 2
-  Attribute index: 20
-  Entropy: 1
-  Available attributes: ******************************************************************************************************************
+  Attribute index: 15
+  Entropy: 0.963483
+  Available attributes: 
+******************************************************************************************************************
   Parent attribute value: 1
-    Attribute index: 2
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 2
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 3
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-Parent attribute value: 3
-  Attribute index: 2
-  Entropy: 0
-  Available attributes: ******************************************************************************************************************
-  Parent attribute value: 2
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
+    Attribute index: 8
+    Entropy: 0.832682
+    Available attributes: 
+******************************************************************************************************************
     Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
+      Attribute index: 0
+      Entropy: 0.688722
+      Available attributes: 
+******************************************************************************************************************
       Parent attribute value: 1
-        Attribute index: 27
+        Attribute index: 9
         Entropy: 0
-        Available attributes: ******************************************************************************************************************
+        Available attributes: 
+******************************************************************************************************************
         Parent attribute value: 1
           Attribute index: 32
           Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
+          Available attributes: 
+******************************************************************************************************************
       Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-  Parent attribute value: 3
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-Parent attribute value: 4
-  Attribute index: 2
-  Entropy: 0
-  Available attributes: ******************************************************************************************************************
-  Parent attribute value: 1
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-  Parent attribute value: 2
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 3
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-Parent attribute value: 5
-  Attribute index: 2
-  Entropy: 0
-  Available attributes: ******************************************************************************************************************
-  Parent attribute value: 2
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 3
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-  Parent attribute value: 3
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-Parent attribute value: 6
-  Attribute index: 2
-  Entropy: 0
-  Available attributes: ******************************************************************************************************************
-  Parent attribute value: 2
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-Parent attribute value: 7
-  Attribute index: 2
-  Entropy: 0
-  Available attributes: ******************************************************************************************************************
-  Parent attribute value: 1
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-  Parent attribute value: 2
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-  Parent attribute value: 3
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-Parent attribute value: 8
-  Attribute index: 2
-  Entropy: 0
-  Available attributes: ******************************************************************************************************************
-  Parent attribute value: 1
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 2
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-  Parent attribute value: 2
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 2
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 3
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 2
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-  Parent attribute value: 3
-    Attribute index: 20
-    Entropy: 0
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 3
-      Attribute index: 6
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 2
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-Parent attribute value: 9
-  Attribute index: 6
-  Entropy: 0.997355
-  Available attributes: ******************************************************************************************************************
-  Parent attribute value: 1
-    Attribute index: 2
-    Entropy: 0.862075
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 20
-      Entropy: 0
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 2
-      Attribute index: 27
-      Entropy: 0.787111
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 20
+        Attribute index: 9
         Entropy: 0.809125
-        Available attributes: ******************************************************************************************************************
+        Available attributes: 
+******************************************************************************************************************
         Parent attribute value: 1
           Attribute index: 32
           Entropy: -1
-          Available attributes: ******************************************************************************************************************
-        Parent attribute value: 3
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
           Attribute index: 32
           Entropy: -1
-          Available attributes: ******************************************************************************************************************
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
       Parent attribute value: 2
-        Attribute index: 20
+        Attribute index: 9
         Entropy: 0
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-  Parent attribute value: 2
-    Attribute index: 2
-    Entropy: 0.960787
-    Available attributes: ******************************************************************************************************************
-    Parent attribute value: 1
-      Attribute index: 20
-      Entropy: 0.970951
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 27
-        Entropy: 0.970951
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
-    Parent attribute value: 2
-      Attribute index: 27
-      Entropy: 0.938722
-      Available attributes: ******************************************************************************************************************
-      Parent attribute value: 1
-        Attribute index: 20
-        Entropy: 0.809125
-        Available attributes: ******************************************************************************************************************
-        Parent attribute value: 1
-          Attribute index: 32
-          Entropy: -1
-          Available attributes: ******************************************************************************************************************
+        Available attributes: 
+******************************************************************************************************************
         Parent attribute value: 3
           Attribute index: 32
           Entropy: -1
-          Available attributes: ******************************************************************************************************************
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 4
+      Attribute index: 9
+      Entropy: 1
+      Available attributes: 
+******************************************************************************************************************
       Parent attribute value: 2
-        Attribute index: 20
+        Attribute index: 0
+        Entropy: 0.809125
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 3
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 2
+    Attribute index: 9
+    Entropy: 0.67927
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 1
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
         Entropy: 1
-        Available attributes: ******************************************************************************************************************
+        Available attributes: 
+******************************************************************************************************************
         Parent attribute value: 1
           Attribute index: 32
           Entropy: -1
-          Available attributes: ******************************************************************************************************************
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 4
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 3
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 4
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 3
+    Attribute index: 9
+    Entropy: 0.795899
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 0.918296
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0.874185
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 0
+      Entropy: 0.811278
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0.688722
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 4
+    Attribute index: 9
+    Entropy: 0.393555
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 4
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 4
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 8
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 4
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 4
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 5
+    Attribute index: 0
+    Entropy: 0
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 9
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 4
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 9
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 4
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+Parent attribute value: 3
+  Attribute index: 15
+  Entropy: 0.904838
+  Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 1
+    Attribute index: 8
+    Entropy: 0.721928
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 9
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 9
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 3
+        Attribute index: 9
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 2
+    Attribute index: 9
+    Entropy: 0
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 3
+    Attribute index: 8
+    Entropy: 0
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 9
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 9
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 4
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 9
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 9
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 4
+    Attribute index: 9
+    Entropy: 0.70717
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 8
+      Entropy: 0.721928
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 0
+        Entropy: 0.649022
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 8
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 4
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 5
+    Attribute index: 0
+    Entropy: 1
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 9
+      Entropy: 1
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 1
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+Parent attribute value: 4
+  Attribute index: 15
+  Entropy: 0.942492
+  Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 1
+    Attribute index: 0
+    Entropy: 0
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 9
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 9
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 9
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 4
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 2
+    Attribute index: 8
+    Entropy: 1
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 9
+      Entropy: 0.5
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 0
+        Entropy: 1
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 3
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 3
+    Attribute index: 9
+    Entropy: 0.451205
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 8
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 3
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 4
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 4
+    Attribute index: 8
+    Entropy: 0.863121
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 0.801377
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 9
+        Entropy: 1
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 9
+        Entropy: 0.649022
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+Parent attribute value: 5
+  Attribute index: 15
+  Entropy: 0.72204
+  Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 1
+    Attribute index: 0
+    Entropy: 0.344361
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 9
+      Entropy: 0.666667
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 4
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 9
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 9
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 3
+    Attribute index: 8
+    Entropy: 0.811278
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 9
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 3
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 4
+    Attribute index: 9
+    Entropy: 0.606844
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 0
+      Entropy: 0.550978
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0.666667
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 2
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 2
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 3
+      Attribute index: 0
+      Entropy: 0
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 8
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+  Parent attribute value: 5
+    Attribute index: 9
+    Entropy: 0.811278
+    Available attributes: 
+******************************************************************************************************************
+    Parent attribute value: 1
+      Attribute index: 8
+      Entropy: 0.811278
+      Available attributes: 
+******************************************************************************************************************
+      Parent attribute value: 1
+        Attribute index: 0
+        Entropy: 0
+        Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 1
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
+        Parent attribute value: 2
+          Attribute index: 32
+          Entropy: -1
+          Available attributes: 
+******************************************************************************************************************
